@@ -1,0 +1,15 @@
+{
+    "name": "durham-stats-codespaces",
+	"build": {
+        "dockerfile": "Dockerfile"
+    },
+	"forwardPorts": [8787],
+	"portsAttributes": {
+		"8787": {
+			"label": "RStudio",
+			"requireLocalPort": true,
+			"onAutoForward": "ignore"
+		}
+	},
+	"postAttachCommand": "sudo rstudio-server start"
+}
