@@ -19,4 +19,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -qq -y update \
 
 RUN echo "auth-none=1" >> /etc/rstudio/rserver.conf \
     && echo "USER=rstudio" >> /etc/environment \
-    && echo -e "[*]\nlog-level=info\nlogger-type=file\n" > /etc/rstudio/logging.conf
+    && echo "[*]\nlog-level=info\nlogger-type=file\n" > /etc/rstudio/logging.conf
+
+COPY startup_msg.sh /home/rstudio/startup_msg.sh

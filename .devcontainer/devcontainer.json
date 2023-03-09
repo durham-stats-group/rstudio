@@ -11,5 +11,5 @@
 			"onAutoForward": "ignore"
 		}
 	},
-	"postAttachCommand": "sudo rstudio-server start; . ./.devcontainer/startup_msg.sh"
+	"postAttachCommand": "sudo rstudio-server start; . /home/rstudio/startup_msg.sh"
 }
