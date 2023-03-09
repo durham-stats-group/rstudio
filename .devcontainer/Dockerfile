@@ -18,4 +18,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -qq -y update \
 #    && echo "RETICULATE_PYTHON=/usr/bin/python3" >> /usr/local/lib/R/etc/Renviron.site
 
 RUN echo "auth-none=1" >> /etc/rstudio/rserver.conf \
-    && echo "USER=rstudio" >> /etc/environment
+    && echo "USER=rstudio" >> /etc/environment \
+    && echo -e "[*]\nlog-level=info\nlogger-type=file\n" > /etc/rstudio/logging.conf
